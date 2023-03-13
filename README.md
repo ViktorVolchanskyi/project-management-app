@@ -1,6 +1,3 @@
-# DJANGO PROJECT TEMPLATE
-
- 
 ## QUICKSTART
  - install "Docker" and "Docker Compose"
  - create and fill dev.env or prod.env with .env.template 
