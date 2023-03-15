@@ -26,10 +26,12 @@ INSTALLED_APPS = [
     'corsheaders',
     'dj_rest_auth',
     'django_extensions',
+    'django_filters',
 
     # Apps:
     'apps.core.apps.CoreConfig',
-    'apps.users.apps.UsersConfig'
+    'apps.users.apps.UsersConfig',
+    'apps.customer.apps.CustomerConfig',
 
 ]
 
@@ -181,7 +183,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
-    )
+    ),
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
 }
 
 # Rest Auth Settings

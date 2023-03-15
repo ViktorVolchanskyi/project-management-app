@@ -22,6 +22,7 @@ django-anymail = "^8.5"
 django-phonenumber-field = "^6.1.0"
 kombu = "^5.2.4"
 raven = "^6.10.0"
+django-filter = "^22.1.0"
 
 [tool.poetry.dev-dependencies]
 django-debug-toolbar = "^3.4.0"

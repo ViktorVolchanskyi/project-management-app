@@ -1,5 +1,6 @@
 from django.urls import path, include
 
+from apps.api.routers import router
 from apps.users import views as users_views, auth_views
 
 app_name = 'api'
@@ -16,4 +17,6 @@ urlpatterns = [
          name='google_login_and_signup'),
 
     path('auth/', include('dj_rest_auth.urls')),
+
+    path('', include(router.urls)),
 ]
